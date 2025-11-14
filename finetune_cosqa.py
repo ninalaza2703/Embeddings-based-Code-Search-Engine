@@ -38,7 +38,7 @@ def get_loader(max_samples=20000, batch=16):
     if max_samples:
         ds = ds.select(range(min(max_samples, len(ds))))
 
-    q, c = ds["nl"], ds["code"]
+    q, c = ds["doc"], ds["code"]
     d = PairDataset(q, c)
     tok = AutoTokenizer.from_pretrained(MODEL_NAME)
 
