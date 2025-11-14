@@ -3,9 +3,10 @@ from datasets import load_dataset
 from search_engine import HFEncoder, MODEL_NAME
 from metrics import aggregate
 
-DATASET_NAME = "cosqa"
-QUERY_COL = "nl"
+DATASET_NAME = "gonglinyuan/CoSQA"
+QUERY_COL = "doc"
 CODE_COL = "code"
+
 
 def load_split(split="test", max_samples=1000):
     ds = load_dataset(DATASET_NAME, split=split)
