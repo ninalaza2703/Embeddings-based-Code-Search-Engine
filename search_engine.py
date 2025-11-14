@@ -91,3 +91,20 @@ class EmbeddingSearchEngine:
             )
         return results
 
+    docs = [
+        "def add(a, b): return a + b",
+        "def multiply(a, b): return a * b",
+        "def factorial(n): return 1 if n == 0 else n * factorial(n-1)",
+        "def sort_list(lst): return sorted(lst)",
+    ]
+
+    encoder = HFEncoder(model_name=BASE_MODEL_NAME)
+    engine = EmbeddingSearchEngine(encoder, docs)
+
+    query = "function that calculates product"
+    print(f"\nQuery: {query}")
+    results = engine.search(query, top_k=3)
+
+    for r in results:
+        print(f"Score: {r.score:.4f} | idx={r.index} | doc={r.doc}")
+
