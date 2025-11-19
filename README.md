@@ -15,7 +15,6 @@ Simple code search project with three parts:
 - `evaluate_cosqa.py`       – eval on CoSQA with base model
 - `finetune_cosqa.py`       – fine-tune on CoSQA + re-eval + loss.png
 - `requirements.txt`        – Python deps
-- `README.md`               – this file
-
+  
 ---
 
