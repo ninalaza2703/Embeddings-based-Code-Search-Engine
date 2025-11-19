@@ -19,10 +19,3 @@ Simple code search project with three parts:
 
 ---
 
-## Setup
-
-```bash
-python -m venv venv
-source venv/bin/activate        # on Windows: venv\Scripts\activate
-pip install --upgrade pip
-pip install -r requirements.txt
